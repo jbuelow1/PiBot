@@ -1,2 +1,5 @@
 # PiBot
-A open-source robot built on the Rasberry Pi 3
+"An open-source robot built on the Rasberry Pi 3"
+
+# Notes
+Please change the current branch to view a different version. Master is latest.
