@@ -1,0 +1,6 @@
+Changelog for PiBot OS v0.7 BETA
+
++ added indicator windows.
++ added low-level uplink support (Not yet implemented).
+* tweaked webUI for better looks on mobile.
+    # A mobile edition will be coming soon.
