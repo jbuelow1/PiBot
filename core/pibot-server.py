@@ -140,10 +140,10 @@ def stop():
     drive(0, 50,50)
 
 def arm(x, y, z, g):
-    pwm.set_pwm(4, 0, x)
-    pwm.set_pwm(5, 0, y)
-    pwm.set_pwm(6, 0, z)
-    pwm.set_pwm(7, 0, g)
+    #pwm.set_pwm(15, 0, x)
+    pwm.set_pwm(4, 0, y)
+    #pwm.set_pwm(15, 0, z)
+    pwm.set_pwm(5, 0, g)
 
 def armHome():
     arm(450, 200, 0, 0)
