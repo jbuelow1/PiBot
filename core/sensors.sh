@@ -11,7 +11,7 @@ do
     CPU_USE=$(expr 100 - $idle)
     CPU_TEMP=$(/opt/vc/bin/vcgencmd measure_temp | cut -d '=' -f 2 | cut -d '.' -f 1)
     WIFI_RSSI=$(qual=$(iwconfig | grep Quality | cut -d '=' -f 2 | cut -d ' ' -f 1 | bc -l) && qual=$(echo "$qual*100" | bc | cut -d '.' -f 1) && echo "$qual/20" | bc)
-    if [[ $(ps | grep python) -eq "" ]]
+    if [[ $(ps a | grep python | head -n 1 | cut -d ' ' -f 11) -ne "python" ]]
     then
     GEN_WARN="on"
     fi
