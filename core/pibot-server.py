@@ -142,9 +142,9 @@ def stop():
 
 def arm(x, y, z, g):
     #pwm.set_pwm(15, 0, x)
-    pwm.set_pwm(5, 0, y)
+    pwm.set_pwm(7, 0, y)
     #pwm.set_pwm(15, 0, z)
-    pwm.set_pwm(4, 0, g)
+    pwm.set_pwm(6, 0, g)
 
 def armHome():
     arm(450, 200, 0, 0)
@@ -254,9 +254,9 @@ while True:
             armz = z - ares
             arm(armx, army, armz, armg)
         elif cmd == "man-close":
-            pwm.set_pwm(4, 0, 200)
+            pwm.set_pwm(6, 0, 200)
         elif cmd == "man-open":
-            pwm.set_pwm(4, 0, 400)
+            pwm.set_pwm(6, 0, 400)
         elif cmd == "man-home":
             armHome()
         elif cmd == "ir-toggle":
@@ -276,7 +276,3 @@ while True:
             os.remove("/var/www/downlink")
         except OSError:
             print '[INFO][ERROR][HANDLED] Tried to remove an inexistant file.'
-    #debugger:
-    print '[DEBUG] Variables:'
-    pprint.pprint(globals())
-    pprint.pprint(locals())
