@@ -7,6 +7,7 @@ import Adafruit_PCA9685
 import os
 #import time
 #from neopixel import *
+import pprint
 
 print '#######################'
 print '# PiBot OS  :::  v0.8 #'
@@ -275,3 +276,7 @@ while True:
             os.remove("/var/www/downlink")
         except OSError:
             print '[INFO][ERROR][HANDLED] Tried to remove an inexistant file.'
+    #debugger:
+    print '[DEBUG] Variables:'
+    pprint.pprint(globals())
+    pprint.pprint(locals())
