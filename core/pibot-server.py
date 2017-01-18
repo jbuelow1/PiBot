@@ -178,6 +178,7 @@ while True:
             if movtog == 1:
                 pwm.set_pwm(0, 0, 483)
                 pwm.set_pwm(1, 0, 483)
+                movtog = 0
             else:
                 drive(1, 100, 100)
         elif cmd == "toggle-mov-up":
@@ -192,6 +193,7 @@ while True:
             elif movtog == 1:
                 pwm.set_pwm(0, 0, 483)
                 pwm.set_pwm(1, 0, 483)
+                movtog = 0
         elif cmd == "mov-left":
             drive(0.5, 75, 25)
         elif cmd == "mov-right":
@@ -234,11 +236,11 @@ while True:
             x = armx
             armx = x - ares
             arm(armx, army, armz, armg)
-        elif cmd == "man-up":
+        elif cmd == "man-down":
             y = army
             army = y + ares
             arm(armx, army, armz, armg)
-        elif cmd == "man-down":
+        elif cmd == "man-up":
             y = army
             army = y - ares
             arm(armx, army, armz, armg)
