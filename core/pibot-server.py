@@ -7,7 +7,7 @@ import Adafruit_PCA9685
 import os
 #import time
 #from neopixel import *
-import pprint
+import Adafruit_VCNL40xx
 
 print '#######################'
 print '# PiBot OS  :::  v0.8 #'
@@ -24,6 +24,8 @@ pwm = Adafruit_PCA9685.PCA9685()
 pwm.set_pwm_freq(60)
 
 print '[INFO][STARTUP] Initialized PWM HAT.'
+
+vcnl = Adafruit_VCNL40xx.VCNL4010()
 
 #Infared Vision
 file = open('/sys/class/gpio/export', 'w')
@@ -276,3 +278,8 @@ while True:
             os.remove("/var/www/downlink")
         except OSError:
             print '[INFO][ERROR][HANDLED] Tried to remove an inexistant file.'
+    #sensors
+    proximity = vcnl.read_proximity()
+    f = open('/var/www/uplink/prox', 'w')
+    f.write(proximity)
+    f.close()
