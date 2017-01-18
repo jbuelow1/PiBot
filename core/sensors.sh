@@ -14,6 +14,8 @@ do
     if [[ $(ps a | grep python | head -n 1 | cut -d ' ' -f 11) -ne "python" ]]
     then
     GEN_WARN="on"
+    else
+    GEN_WARN="off"
     fi
 
     echo $CPU_USE > /var/www/uplink/cpuuse
