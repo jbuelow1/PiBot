@@ -251,9 +251,9 @@ while True:
             armz = z - ares
             arm(armx, army, armz, armg)
         elif cmd == "man-close":
-            arm(0, 0, 0, 200)
+            pwm.set_pwm(4, 0, 200)
         elif cmd == "man-open":
-            arm(0, 0, 0, 400)
+            pwm.set_pwm(4, 0, 400)
         elif cmd == "man-home":
             armHome()
         elif cmd == "ir-toggle":
