@@ -36,6 +36,11 @@
             }
         </style>
         <script>
+            if(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                window.location ="/m/";
+            }
+        </script>
+        <script>
             function send(cmd) {
                 document.getElementById('php').src = 'send.php?cmd=' + cmd;
             }
