@@ -4,8 +4,13 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <link rel="apple-touch-icon" href="apple-touch-icon-precomposed.png">
-    <link href="apple-touch-startup-image-640x1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
     <meta name="apple-mobile-web-app-title" content="PiBot R/C">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(window).load(function() {
+	      $(".loader").fadeOut("slow");
+      })
+    </script>
     <script>
       function send(cmd) {
         document.getElementById('php').src = 'send.php?cmd=' + cmd;
@@ -16,9 +21,21 @@
         e.preventDefault();
       });
     </script>
+    <style>
+      .loader {
+	      position: fixed;
+	      left: 0px;
+	      top: 0px;
+	      width: 100%;
+	      height: 100%;
+	      z-index: 9999;
+	      background: url('images/page-loader.gif') 50% 50% no-repeat rgb(249,249,249);
+      }
+    </style>
   </head>
   <body>
     <center>
+      <div class="loader"></div>
       <img src="img/fleft.png" width="30%" onclick="send('mov-fleft')">
       <img src="img/up.png" width="30%" onclick="send('mov-up')">
       <img src="img/fright.png" width="30%" onclick="send('mov-fright')">
