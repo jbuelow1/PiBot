@@ -1,1 +1,16 @@
-
+<html>
+  <head>
+    <link rel="apple-touch-icon" href="apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-startup-image" href="apple-touch-launch.png">
+    <meta name="apple-mobile-web-app-title" content="PiBot R/C">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script>
+      function send(cmd) {
+        document.getElementById('php').src = 'send.php?cmd=' + cmd;
+      }
+    </script>
+  </head>
+  <body>
+    Beta Test
+  </body>
+</html>
