@@ -11,6 +11,11 @@
         document.getElementById('php').src = 'send.php?cmd=' + cmd;
       }
     </script>
+    <script>
+      document.addEventListener('touchstart', function (e) {
+        e.preventDefault();
+      });
+    </script>
   </head>
   <body>
     <center>
