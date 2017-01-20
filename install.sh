@@ -10,8 +10,8 @@ git clone https://github.com/jbuelow1/PiBot.git
 cd PiBot
 git checkout v1.0
 mkdir /PiBotOS
-cp ./core/server.py /PiBotOS/server.py
+cp ./core/pibot-server.py /PiBotOS/server.py
 cp ./core/sensors.sh /PiBotOS/sensors.sh
-cp ./manager/manager.sh /PiBotOS/start.sh
+cp ./manager/pibot-manager.sh /PiBotOS/start.sh
 cp -r ./webui/* /var/www/html/control/
 
