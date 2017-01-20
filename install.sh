@@ -13,6 +13,5 @@ mkdir /PiBotOS
 cp ./core/server.py /PiBotOS/server.py
 cp ./core/sensors.sh /PiBotOS/sensors.sh
 cp ./manager/manager.sh /PiBotOS/start.sh
-echo "/bin/bash /PiBotOS/start.sh" >> /etc/rc.local
 cp -r ./webui/* /var/www/html/control/
 
